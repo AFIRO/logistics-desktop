@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.zetta.logisticsdesktop.gui.login.LoginController">
+     <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="340.0" stylesheets="@../css/style.css">
+         <ImageView fx:id="imgLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+             <Image url="@../images/delaware-logo.png" />
+         </ImageView>
+      <Label fx:id="lblHeader" styleClass="title" text="Login" textFill="#6f6f6f">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="15.0" />
+         </VBox.margin></Label>
+         <Label fx:id="lblEmail" style="-fx-font-size: 16px;" styleClass="" stylesheets="@../css/style.css" text="Emailadres">
+             <VBox.margin>
+                 <Insets bottom="5.0" />
+             </VBox.margin>
+         </Label>
+         <TextField fx:id="txtEmail" prefWidth="200.0">
+             <VBox.margin>
+                 <Insets bottom="10.0" />
+             </VBox.margin>
+         </TextField>
+         <Label fx:id="lblPassword" style="-fx-font-size: 16px;" styleClass="" stylesheets="@../css/style.css" text="Wachtwoord">
+             <VBox.margin>
+                 <Insets bottom="5.0" />
+             </VBox.margin>
+         </Label>
+         <PasswordField fx:id="txtPassword" prefWidth="200.0">
+             <VBox.margin>
+                 <Insets bottom="10.0" />
+             </VBox.margin>
+         </PasswordField>
+         <Label fx:id="lblFouteCredentials" style="-fx-font-size: 10px; -fx-text-fill: red " styleClass="" stylesheets="@../css/style.css" text="Credentials zijn verkeerd. Probeer opnieuw." visible="false">
+             <VBox.margin>
+                 <Insets bottom="5.0" />
+             </VBox.margin>
+         </Label>
+      <HBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+         <children>
+               <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#login" prefWidth="100.0" stylesheets="@../css/style.css" text="Login" textAlignment="CENTER">
+                   <styleClass>
+                       <String fx:value="filled-button" />
+                   </styleClass>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               </Button>
+            <Button fx:id="btnLogin1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loginAdmin" prefWidth="100.0" styleClass="hollow-button" stylesheets="@../css/style.css" text="Admin" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnLogin11" layoutX="90.0" layoutY="10.0" mnemonicParsing="false" onAction="#loginMagazijnier" prefWidth="140.0" styleClass="hollow-button" stylesheets="@../css/style.css" text="Magazijnier" textAlignment="CENTER" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+     </VBox>
+   <padding>
+      <Insets bottom="30.0" left="100.0" right="100.0" top="30.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.zetta.logisticsdesktop.gui.admin.DoosDetailController">
+   <children>
+      <HBox layoutX="575.0" layoutY="301.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#cancelEdit" prefWidth="64.0" styleClass="underlined-button" text="Cancel">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveBox" prefWidth="64.0" styleClass="underlined-button" text="Save">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#deleteBox" prefWidth="64.0" styleClass="underlined-button" text="Delete" />
+         </children>
+      </HBox>
+      <HBox layoutX="25.0" layoutY="14.0" prefHeight="100.0" prefWidth="750.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="240.0" style="-fx-border-color: #d3d3d3; -fx-border-width: 0 2px 0px 0px;">
+               <children>
+                  <Label styleClass="title" text="Gegevens doos">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblName" text="Naam">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtName" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label fx:id="lblType" text="Type">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radioStandard" mnemonicParsing="false" text="Standaard">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioCustom" mnemonicParsing="false" text="Custom">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <Label fx:id="lblPrice" text="Prijs">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="txtPrice" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="250.0">
+               <children>
+                  <Label fx:id="lblDimensions" text="Afmetingen (cm)">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="38.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="20.0">
+                     <children>
+                        <Label fx:id="lblWidth" text="Breedte">
+                           <HBox.margin>
+                              <Insets right="6.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblHeight" text="Hoogte">
+                           <HBox.margin>
+                              <Insets right="7.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="lblLength" text="Lengte" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="txtWidth" maxWidth="-Infinity" prefWidth="40.0">
+                           <HBox.margin>
+                              <Insets left="8.0" right="18.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="txtHeight" maxWidth="40.0" prefWidth="45.0">
+                           <HBox.margin>
+                              <Insets right="18.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="txtLength" maxWidth="40.0" prefWidth="45.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblActive" text="Actief">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <RadioButton fx:id="radioActiveYes" mnemonicParsing="false" text="Ja">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="radioActiveNo" mnemonicParsing="false" text="Nee" />
+               </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="lblMessage" layoutX="25.0" layoutY="328.0" prefHeight="27.0" prefWidth="433.0" styleClass="info">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMessage" layoutX="266.0" layoutY="313.0" prefHeight="25.0" prefWidth="297.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
